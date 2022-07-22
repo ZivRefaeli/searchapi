@@ -24,3 +24,6 @@ Add the dependency
 ```gradle
   implementation 'com.github.zivrefaeli:searchZ:v1.0.0'
 ```
+
+## License
+searchZ was created by Ziv Refaeli and released under the [MIT license](https://github.com/zivrefaeli/searchZ/blob/master/LICENCE).

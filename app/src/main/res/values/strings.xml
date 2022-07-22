@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SearchAPI</string>
+    <string name="result">result</string>
+    <string name="enter">Enter a keyword</string>
+    <string name="search">Search</string>
+    <string name="searches">Searches: 0</string>
+</resources>

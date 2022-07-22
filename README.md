@@ -12,17 +12,27 @@ Search images and search results for each keyword
 
 Add the JitPack repository to your build file
 ```gradle
-  allprojects {
-    repositories {
-      ...
-      maven { url 'https://jitpack.io' }
-    }
-  }
+allprojects {
+      repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+      }
+}
 ```
 
 Add the dependency
 ```gradle
-  implementation 'com.github.zivrefaeli:searchZ:v1.0.0'
+implementation 'com.github.zivrefaeli:searchZ:v1.0.0'
+```
+
+## Example
+```java
+SearchEngine engine = new SearchEngine(CONTEXT, API_KEY, CX);
+engine.search(KEYWORD, (image, searches) -> {
+    // use the response paramters:
+    // image (Bitmap) and searches (String)
+    // if error occured, null will be returned
+});
 ```
 
 ## License

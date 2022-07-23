@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     public static final String API_KEY = "API_KEY";
-    public static final String CX = "CX";
+    public static final String CX = "CX ";
     private ImageView ivResult;
     private TextView tvTotalResults;
     private EditText etKeyword;

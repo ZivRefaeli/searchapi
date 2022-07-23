@@ -4,7 +4,7 @@
 Search for images for each keyword
 
 ## Demo
-todo: add demo.gif
+![searchZ](/demo.gif)
 
 ## Installation
 - Create a GCP project
@@ -26,7 +26,7 @@ allprojects {
 Add the dependency
 ```gradle
 dependencies {
-      implementation 'com.github.zivrefaeli:searchZ:Tag'
+      implementation 'com.github.zivrefaeli:searchZ:v1.0.0'
 }
 ```
 

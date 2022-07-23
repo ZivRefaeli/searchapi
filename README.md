@@ -1,7 +1,7 @@
 # Search Z
 [![](https://jitpack.io/v/zivrefaeli/searchZ.svg)](https://jitpack.io/#zivrefaeli/searchZ)
 
-Search images and search results for each keyword
+Search for images for each keyword
 
 ## Installation
 - Create a GCP project
@@ -22,7 +22,9 @@ allprojects {
 
 Add the dependency
 ```gradle
-implementation 'com.github.zivrefaeli:searchZ:v1.0.0'
+dependencies {
+      implementation 'com.github.zivrefaeli:searchZ:Tag'
+}
 ```
 
 ## Example

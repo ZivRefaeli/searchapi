@@ -3,6 +3,9 @@
 
 Search for images for each keyword
 
+## Demo
+todo: add demo.gif
+
 ## Installation
 - Create a GCP project
 - Add **Custom Search API** to your project
@@ -27,13 +30,13 @@ dependencies {
 }
 ```
 
-## Example
+## Usage
 ```java
-SearchEngine engine = new SearchEngine(CONTEXT, API_KEY, CX);
-engine.search(KEYWORD, (image, searches) -> {
+SearchZ searchZ = new SearchZ(CONTEXT, API_KEY, CX);
+searchZ.search(KEYWORD, (image, totalResults) -> {
     // use the response values:
     //      image (Bitmap)
-    //      amount of keyword searches (String)
+    //      total results of the keyword (String)
     // if error occured, null will be returned
 });
 ```

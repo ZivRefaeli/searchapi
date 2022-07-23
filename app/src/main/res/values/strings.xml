@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">SearchAPI</string>
+    <string name="app_name">searchZ</string>
     <string name="result">result</string>
     <string name="enter">Enter a keyword</string>
     <string name="search">Search</string>
-    <string name="searches">Searches: 0</string>
+    <string name="total_results">Total Results: 0</string>
 </resources>

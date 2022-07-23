@@ -27,11 +27,11 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <TextView
-        android:id="@+id/tv_searches"
+        android:id="@+id/tv_total_results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/searches"
+        android:text="@string/total_results"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_result" />
@@ -46,7 +46,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_searches" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_results" />
 
     <Button
         android:layout_width="wrap_content"

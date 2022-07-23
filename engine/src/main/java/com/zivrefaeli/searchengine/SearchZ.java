@@ -19,14 +19,14 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.URL;
 
-public class SearchEngine {
-    private static final String TAG = "SearchEngine TAG";
-    private static final String url = "https://www.googleapis.com/customsearch/v1";
+public class SearchZ {
+    private static final String TAG = "SearchZ";
+    private static final String URL = "https://www.googleapis.com/customsearch/v1";
     private final Context context;
     private final String key, cx;
     private final Handler mainHandler;
 
-    public SearchEngine(@NonNull Context context, String key, String cx) {
+    public SearchZ(@NonNull Context context, String key, String cx) {
         this.context = context;
         this.key = key;
         this.cx = cx;
@@ -34,7 +34,7 @@ public class SearchEngine {
     }
 
     public void search(@NonNull String keyword, Result result) {
-        String request = String.format("%s?key=%s&cx=%s&q=%s", url, key, cx, keyword.replace(" ", "%20"));
+        String request = String.format("%s?key=%s&cx=%s&q=%s", URL, key, cx, keyword.replace(" ", "%20"));
         Log.i(TAG, "search: request=" + request);
 
         Volley.newRequestQueue(context).add(new StringRequest(
@@ -67,17 +67,18 @@ public class SearchEngine {
             }
 
             JSONObject searchInformation = (JSONObject) object.get("searchInformation");
-            String searches = searchInformation.getString("formattedTotalResults");
+            String totalResults = searchInformation.getString("formattedTotalResults");
             String finalSrc = src;
             new Thread(() -> {
                 try {
                     URL url = new URL(finalSrc);
                     Bitmap bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-                    mainHandler.post(() -> result.response(bitmap, searches));
+                    mainHandler.post(() -> result.response(bitmap, totalResults));
                 } catch (IOException e) {
                     e.printStackTrace();
                     mainHandler.post(() -> result.response(null, null));
                 }
+                Log.i(TAG, "fetch: done");
             }).start();
         } catch (JSONException e) {
             e.printStackTrace();

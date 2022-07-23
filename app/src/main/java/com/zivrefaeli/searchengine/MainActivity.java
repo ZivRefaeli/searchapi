@@ -12,9 +12,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String API_KEY = "API_KEY";
     public static final String CX = "CX";
     private ImageView ivResult;
-    private TextView tvSearches;
+    private TextView tvTotalResults;
     private EditText etKeyword;
-    private SearchEngine engine;
+    private SearchZ searchZ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +22,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ivResult = findViewById(R.id.iv_result);
-        tvSearches = findViewById(R.id.tv_searches);
+        tvTotalResults = findViewById(R.id.tv_total_results);
         etKeyword = findViewById(R.id.et_keyword);
-        engine = new SearchEngine(this, API_KEY, CX);
+        searchZ = new SearchZ(this, API_KEY, CX);
     }
 
     public void search(View view) {
         String keyword = etKeyword.getText().toString();
-        engine.search(keyword, (image, searches) -> {
+
+        searchZ.search(keyword, (image, totalResults) -> {
             ivResult.setImageBitmap(image);
-            tvSearches.setText(String.format("Searches: %s", searches));
+            tvTotalResults.setText(String.format("Total Results: %s", totalResults));
+            etKeyword.setText(null);
         });
-        etKeyword.setText(null);
     }
 }

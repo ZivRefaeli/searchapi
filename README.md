@@ -31,8 +31,8 @@ dependencies {
 ```java
 SearchEngine engine = new SearchEngine(CONTEXT, API_KEY, CX);
 engine.search(KEYWORD, (image, searches) -> {
-    // use the response paramters:
-    // image (Bitmap) and searches (String)
+    // use the response values:
+    // image (Bitmap) and amount of searches (String)
     // if error occured, null will be returned
 });
 ```

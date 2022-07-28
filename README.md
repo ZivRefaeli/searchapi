@@ -26,7 +26,7 @@ allprojects {
 Add the dependency
 ```gradle
 dependencies {
-      implementation 'com.github.zivrefaeli:searchZ:v1.0.1'
+      implementation 'com.github.zivrefaeli:searchZ:v1.0.0'
 }
 ```
 
@@ -37,7 +37,7 @@ searchZ.search(KEYWORD, (image, totalResults) -> {
     // use the response values:
     //      image (Bitmap)
     //      total results of the keyword (String)
-    // if error occured, null will be returned
+    // if an error occurred, null will be returned
 });
 ```
 

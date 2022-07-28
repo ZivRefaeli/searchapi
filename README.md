@@ -26,7 +26,7 @@ allprojects {
 Add the dependency
 ```gradle
 dependencies {
-      implementation 'com.github.zivrefaeli:searchZ:v1.0.0'
+      implementation 'com.github.zivrefaeli:searchZ:v1.0.1'
 }
 ```
 
